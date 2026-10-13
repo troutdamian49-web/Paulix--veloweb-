@@ -75,10 +75,14 @@ The cards crop automatically, so any similar aspect ratio works.
 
 ## Deploying
 
-Hosting is GitHub Pages, served from the `main` branch root:
+Hosting is **GitHub Pages**, published by the workflow in
+`.github/workflows/deploy-pages.yml` on every push to `main`.
 
-1. Commit and push changes to `main`.
-2. GitHub Pages republishes automatically in about a minute.
+**One-time setup (repo owner):** open **Settings → Pages** and set
+**Build and deployment → Source** to **GitHub Actions**. After that, every push to `main`
+republishes the site automatically — or run the workflow manually from the **Actions** tab.
+
+The site is served at https://troutdamian49-web.github.io/Paulix--veloweb-/
 
 To point a custom domain here later: add the domain in **Settings → Pages → Custom domain**
 and create a `CNAME` file containing just the domain name.
