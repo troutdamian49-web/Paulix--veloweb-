@@ -15,7 +15,40 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Works with either Pages setup:
+  #   build_type "workflow" -> the site is published by this workflow
+  #   build_type "legacy"   -> the site is published from the main branch, so skip deploying here
+  #   "none"                -> Pages is not enabled yet; skip quietly instead of failing
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      build_type: ${{ steps.pages.outputs.build_type }}
+    steps:
+      - name: Check how Pages is configured
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          build_type=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.build_type' 2>/dev/null || echo "none")
+          echo "Pages build_type: ${build_type}"
+          echo "build_type=${build_type}" >> "$GITHUB_OUTPUT"
+
+          case "$build_type" in
+            workflow)
+              echo "::notice::Publishing with GitHub Actions."
+              ;;
+            legacy)
+              echo "::notice title=Pages publishes from the main branch::Skipping the Actions deploy. To publish with this workflow instead, open Settings → Pages → Build and deployment → Source and choose 'GitHub Actions'."
+              ;;
+            *)
+              echo "::warning title=GitHub Pages is not enabled yet::Open https://github.com/${GITHUB_REPOSITORY}/settings/pages and set 'Build and deployment → Source'. Either option publishes this site: 'Deploy from a branch' with branch 'main' and folder '/ (root)', or 'GitHub Actions' to use this workflow."
+              ;;
+          esac
+
   build:
+    needs: check
+    if: needs.check.outputs.build_type == 'workflow'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,9 +56,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # Creates the Pages site on first run if it does not exist yet
-          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

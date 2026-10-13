@@ -75,12 +75,26 @@ The cards crop automatically, so any similar aspect ratio works.
 
 ## Deploying
 
-Hosting is **GitHub Pages**, published by the workflow in
-`.github/workflows/deploy-pages.yml` on every push to `main`.
+The site is plain HTML/CSS/JS, so **either** GitHub Pages publishing option works — pick
+whichever you find first:
 
-**One-time setup (repo owner):** open **Settings → Pages** and set
-**Build and deployment → Source** to **GitHub Actions**. After that, every push to `main`
-republishes the site automatically — or run the workflow manually from the **Actions** tab.
+**Option A — Deploy from a branch (simplest)**
+
+1. Repo → **Settings** tab (next to Insights; on a narrow window it hides under the **⋯** menu)
+2. Left sidebar → **Pages** (under *Code, planning, and automation*)
+3. Under **Build and deployment → Source**, choose **Deploy from a branch**
+4. Branch: **main**, Folder: **/ (root)** → **Save**
+
+**Option B — GitHub Actions**
+
+Same Pages screen, but choose **GitHub Actions** as the Source. The workflow in
+`.github/workflows/deploy-pages.yml` then publishes the site on every push to `main`.
+
+The workflow detects which option you picked and does the right thing: it deploys when
+Pages is set to GitHub Actions, and steps aside quietly when Pages publishes from the
+branch. It never fails the build because of a Pages setting.
+
+Direct link to the setting: https://github.com/troutdamian49-web/Paulix--veloweb-/settings/pages
 
 The site is served at https://troutdamian49-web.github.io/Paulix--veloweb-/
 
