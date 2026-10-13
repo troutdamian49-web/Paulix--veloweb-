@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://troutdamian49-web.github.io/Paulix--veloweb-/sitemap.xml
