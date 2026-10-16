@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simulated order confirmation — Justice International School (Demo Prototype)</title>
+<meta name="description" content="Simulated order confirmation from the Justice International School online textbook ordering prototype. The reference is fictional, no payment has been received and no order exists in any school system." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0a1e3c" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="demo-ribbon" role="note">
+  <strong>DEMO PROTOTYPE</strong> <span>—</span> NOT AN OFFICIAL SCHOOL SERVICE. Simulated data only.
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Justice International School online textbook ordering — home">
+      <span class="brand-mark" aria-hidden="true">JIS</span>
+      <span class="brand-text">
+        <strong>Justice International School</strong>
+        <small>Online Textbook Ordering</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="class-lists.html">Class lists</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ &amp; safety</a>
+      <a class="nav-cart" href="cart.html">Demo cart <span class="cart-count" data-cart-count hidden>0</span></a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section section-tight section-alt section-line">
+    <div class="wrap">
+      <p class="eyebrow">Step 4 of 4 · Simulated</p>
+      <h1>Simulated order confirmation</h1>
+      <div class="status-banner" style="margin-top:18px">
+        <span aria-hidden="true">⚠</span>
+        <span>SIMULATED ORDER — no payment was received, no payment was verified, and no order exists in any school system.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-order-page>
+    <div class="wrap">
+
+      <!-- No simulated order in this browser -->
+      <div class="empty-state" data-order-empty>
+        <span class="empty-icon" aria-hidden="true">0</span>
+        <h2 style="font-size:1.25rem">No simulated order found in this browser</h2>
+        <p class="muted">
+          Demo orders are only kept in the browser that created them. Add titles to the demo cart and complete
+          the demo checkout to see a sample confirmation, or simply keep browsing the catalogue.
+        </p>
+        <p class="btn-row" style="margin-top:20px; justify-content:center">
+          <a class="btn btn-primary" href="books.html">Browse the confirmed titles</a>
+          <a class="btn btn-ghost" href="cart.html">Open the demo cart</a>
+        </p>
+      </div>
+
+      <!-- Simulated order found -->
+      <div data-order-filled hidden>
+        <div class="ref-box">
+          <p class="ref-label">Simulated demo reference</p>
+          <p class="ref-value" data-order-ref>DEMO-JIS-000000</p>
+          <p style="color:#c3d1e6; margin:0">
+            This reference was generated inside your browser for demonstration only. It is not recognised by
+            Justice International School and it is not proof of payment.
+          </p>
+
+          <dl class="ref-grid">
+            <div>
+              <dt>Reference type</dt>
+              <dd>Fictional demo sample</dd>
+            </div>
+            <div>
+              <dt>Sample payment status</dt>
+              <dd class="status-sim" data-order-status>SIMULATED — no payment was received or verified</dd>
+            </div>
+            <div>
+              <dt>Created (browser time)</dt>
+              <dd data-order-date>—</dd>
+            </div>
+            <div>
+              <dt>Confirmed titles</dt>
+              <dd><span data-order-items>0</span> titles · <span data-order-copies>0</span> copies</dd>
+            </div>
+            <div>
+              <dt>Demo subtotal (placeholder rate)</dt>
+              <dd data-order-subtotal>₦0</dd>
+            </div>
+            <div>
+              <dt>Amount payable</dt>
+              <dd>To be confirmed by the school.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="callout callout-danger" style="margin-top:20px">
+          <span class="callout-icon" aria-hidden="true">!</span>
+          <div>
+            <h4>What this page does not mean</h4>
+            <ul class="not-list" style="margin-top:10px">
+              <li>It does not mean a payment was made, received or verified.</li>
+              <li>It does not mean any book has been reserved, ordered or allocated.</li>
+              <li>It does not mean a price, class list or collection date has been agreed.</li>
+              <li>It is not an official receipt and it must not be shown to the school as proof of purchase.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:22px">
+          <h2 style="font-size:1.2rem">Simulated basket</h2>
+          <ul class="checkout-list" data-order-list></ul>
+          <p class="field-note">
+            Totals use the ₦1,000 per copy demo placeholder rate. Real prices remain
+            <strong>To be confirmed by the school.</strong>
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:22px">
+          <div class="card">
+            <h3>Print or save this sample</h3>
+            <p class="muted small">
+              Useful for showing the review panel what a future confirmation screen could look like. The print
+              layout includes the demo warnings.
+            </p>
+            <p class="btn-row no-print" style="margin-top:14px">
+              <button type="button" class="btn btn-primary" data-order-print>Print / save as PDF</button>
+              <a class="btn btn-ghost" href="books.html">Start a new demo order</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Remove this simulated order</h3>
+            <p class="muted small">
+              Deleting it clears the sample reference from this browser. Nothing needs to be cancelled at the
+              school, because nothing was ever sent.
+            </p>
+            <p class="btn-row no-print" style="margin-top:14px">
+              <button type="button" class="btn btn-danger-ghost" data-order-clear>Remove this simulated order</button>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout-info" style="margin-top:22px">
+          <span class="callout-icon" aria-hidden="true">i</span>
+          <div>
+            <h4>What would happen in a real service</h4>
+            <p>
+              After school approval the service would show confirmed class lists and real prices, send the
+              order to the school, and direct families to an approved payment route arranged by the school —
+              never to a page collecting card or PIN details.
+            </p>
+            <p><a href="how-it-works.html">See the full walkthrough</a> and the <a href="faq.html">safeguards</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">JIS</span>
+        <div>
+          <strong>Justice International School — Online Textbook Ordering</strong>
+          <p>
+            DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE. Every title label, reference and payment
+            status shown in this prototype is sample content created for review.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Prototype pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Book catalogue</a></li>
+          <li><a href="class-lists.html">Class lists</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="faq.html">FAQ &amp; safety</a></li>
+          <li><a href="cart.html">Demo cart</a></li>
+          <li><a href="checkout.html">Demo checkout</a></li>
+          <li><a href="order.html">Simulated order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Please note</h4>
+        <ul>
+          <li>No real payments are processed or verified.</li>
+          <li>No bank, card, PIN or OTP details are ever requested.</li>
+          <li>No parent or pupil information is collected.</li>
+          <li>No title is assigned to SS1, SS2 or SS3 yet.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-legal">
+      <span>&copy; <span id="year">2026</span> Justice International School — Online Textbook Ordering (demo prototype).</span>
+      <span>Prepared for school review only. Not an official school service.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/catalogue.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/checkout.js" defer></script>
+</body>
+</html>

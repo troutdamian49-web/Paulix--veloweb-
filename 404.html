@@ -3,50 +3,64 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Page not found — Paulix × VeloWeb</title>
+<title>Page not found — Justice International School (Demo Prototype)</title>
 <meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0a1e3c" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-  :root { --ink:#0b0b0d; --gold:#c8a24a; --cream:#f8f4ed; }
+  :root { --navy:#0a1e3c; --gold:#c8a24a; --cream:#fbf8f2; }
   * { box-sizing: border-box; }
   body {
-    margin:0; min-height:100vh; display:grid; place-items:center;
-    background: radial-gradient(70% 100% at 80% 0%, rgba(200,162,74,.28), transparent 60%), var(--cream);
-    color:#16161b; font-family:"Inter", system-ui, sans-serif; text-align:center; padding:32px;
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: radial-gradient(70% 100% at 80% 0%, rgba(200,162,74,.24), transparent 60%), var(--cream);
+    color: #10182b; font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    text-align: center; padding: 32px; line-height: 1.6;
   }
   .mark {
-    display:grid; place-items:center; width:64px; height:64px; margin:0 auto 26px;
-    border-radius:18px; background:var(--ink); color:#fff;
-    font-family:"Sora", sans-serif; font-weight:700; font-size:22px; letter-spacing:-.03em;
+    display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 20px;
+    border-radius: 18px; background: linear-gradient(140deg, #16386a, var(--navy)); color: #fff;
+    font-family: "Sora", system-ui, sans-serif; font-weight: 700; font-size: 18px; letter-spacing: .02em;
   }
-  .mark span { color:var(--gold); margin:0 2px; }
-  h1 { font-family:"Sora", sans-serif; font-size:clamp(1.9rem,5vw,3rem); margin:0 0 14px; letter-spacing:-.03em; }
-  p { color:#5b5b66; max-width:46ch; margin:0 auto 30px; }
+  .demo-label {
+    display: inline-block; margin: 0 auto 18px; padding: 6px 14px; border-radius: 999px;
+    background: #fdf2f0; border: 1px solid #f0cfca; color: #a8342b;
+    font-family: "Sora", system-ui, sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  h1 { font-family: "Sora", system-ui, sans-serif; font-size: clamp(1.7rem, 5vw, 2.6rem); margin: 0 0 14px; letter-spacing: -.03em; }
+  p { color: #4a566f; max-width: 52ch; margin: 0 auto 18px; }
   a.btn {
-    display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:999px;
-    background:var(--ink); color:#fff; text-decoration:none;
-    font-family:"Sora", sans-serif; font-weight:600; font-size:15.5px;
-    box-shadow:0 22px 45px -24px rgba(11,11,13,.85); transition:transform .25s ease, background .25s ease;
+    display: inline-flex; align-items: center; gap: 10px; padding: 15px 28px; border-radius: 999px;
+    background: var(--navy); color: #fff; text-decoration: none;
+    font-family: "Sora", system-ui, sans-serif; font-weight: 600; font-size: 15.5px;
+    box-shadow: 0 22px 45px -24px rgba(10, 30, 60, .85); transition: transform .25s ease, background .25s ease;
   }
-  a.btn:hover { transform:translateY(-2px); background:#000; }
-  .links { margin-top:26px; display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:center; font-size:14.5px; }
-  .links a { color:#5b5b66; text-decoration:none; border-bottom:1px solid rgba(200,162,74,.7); }
-  .links a:hover { color:#b9704b; }
+  a.btn:hover { transform: translateY(-2px); background: #16386a; }
+  .links { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; font-size: 14.5px; }
+  .links a { color: #4a566f; text-decoration: none; border-bottom: 1px solid rgba(200,162,74,.7); }
+  .links a:hover { color: #a8821f; }
+  .note { margin-top: 30px; font-size: 13px; color: #6b7689; max-width: 56ch; }
 </style>
 </head>
 <body>
   <main>
-    <div class="mark">P<span>×</span>V</div>
-    <h1>This page took a wrong turn.</h1>
-    <p>The link you followed doesn&rsquo;t exist any more — but the studio is still right here.</p>
-    <a class="btn" href="/Paulix--veloweb-/">Back to the homepage</a>
-    <nav class="links" aria-label="Quick links">
-      <a href="/Paulix--veloweb-/#services">Services</a>
-      <a href="/Paulix--veloweb-/#work">Work</a>
-      <a href="/Paulix--veloweb-/#contact">Contact</a>
-      <a href="https://wa.me/2348061401149" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="mark" aria-hidden="true">JIS</div>
+    <p class="demo-label">Demo prototype — not an official school service.</p>
+    <h1>This page isn&rsquo;t part of the demo.</h1>
+    <p>The link you followed doesn&rsquo;t exist in this prototype. Everything that is built is reachable from the catalogue.</p>
+    <a class="btn" href="index.html">Back to the demo home page</a>
+    <nav class="links" aria-label="Prototype pages">
+      <a href="books.html">Book catalogue</a>
+      <a href="class-lists.html">Class lists</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ &amp; safety</a>
+      <a href="cart.html">Demo cart</a>
     </nav>
+    <p class="note">
+      Remember: this prototype shows seven confirmed titles only, no real prices, no class assignments and no
+      payment processing. Unconfirmed details are shown as &ldquo;To be confirmed by the school.&rdquo;
+    </p>
   </main>
 </body>
 </html>
