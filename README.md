@@ -54,6 +54,21 @@ prices have been invented: wherever a detail is outstanding the page reads
 | Personal data | **None collected.** No name, contact, bank, card, PIN or OTP fields anywhere |
 | Storage | Demo cart and simulated order live in this browser only (`localStorage`) — no server, no accounts |
 
+## Corrections applied in this revision
+
+| # | Correction requested | Where it now stands |
+| --- | --- | --- |
+| 1 | Only the seven confirmed titles | `assets/js/catalogue.js` (single source) → `books.html`, home page and cart. Nothing else is listed anywhere |
+| 2 | No invented authors, class assignments, stock or prices | Every unconfirmed field reads **"To be confirmed by the school."** on the cards, tables and summaries; the only money figure is the labelled demo placeholder rate |
+| 3 | No assignment to SS1 / SS2 / SS3 | `class-lists.html` (all three unconfirmed) and `window.JIS_CATALOGUE.classLists` are empty; the catalogue has no class filter, and says why |
+| 4 | Replace "SchoolBook" / `[SCHOOL NAME]` | The whole site now uses **"Justice International School — Online Textbook Ordering"** (brand, titles, footer, meta) |
+| 5 | Show the demo notice | **"DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE."** in the ribbon, hero, page notices and footer of every page |
+| 6 | Interactive cart + demo checkout, verified | `cart.html` / `checkout.html` — add, remove, quantity change, clear, live count and totals. Covered by 85 automated checks (headless browser + jsdom) |
+| 7 | Fictional demo orders, clearly simulated | `order.html`: `DEMO-JIS-XXXXXX` reference generated in the browser, status reads "SIMULATED — no payment was received or verified", plus "this page does not mean…" list and "not an official receipt" |
+| 8 | Keep the no-payment warning, collect nothing | Payment warning on home, catalogue, cart, checkout and FAQ; zero personal/payment input fields anywhere; no bank, card, PIN or OTP requests |
+| 9 | Review buttons, nav, filters, confirmation, mobile | All internal links/anchors resolve (247 checked), filters and reset work, empty states and deep links work, no horizontal overflow at 320/390/768/1280/1600 px, toast and sticky bars verified on mobile |
+| 10 | Don't remove working functionality or redesign | Same navy + gold design language, same section structure and typography; the previous portfolio site is preserved untouched under `studio/` |
+
 ## Project structure
 
 ```

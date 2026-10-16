@@ -904,14 +904,24 @@ table.data .cell-sim { color: var(--gold-600); font-weight: 600; }
 .checkout-list li {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 4px 14px;
-  padding: 12px 0;
+  gap: 6px 18px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--line-soft);
   margin: 0;
 }
+.checkout-list li:last-child { border-bottom: 0; }
+.checkout-list .co-main { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .checkout-list .co-title { font-weight: 600; color: var(--navy-800); }
 .checkout-list .co-meta { font-size: .82rem; color: var(--ink-muted); }
-.checkout-list .co-amount { text-align: right; font-family: var(--font-display); font-weight: 700; color: var(--navy-800); }
+.checkout-list .co-meta.pending { color: var(--warn-700); font-weight: 600; }
+.checkout-list .co-amount {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--navy-800);
+  white-space: nowrap;
+}
 
 .ack {
   display: flex;
@@ -1118,22 +1128,26 @@ table.data .cell-sim { color: var(--gold-600); font-weight: 600; }
   transform: translate(-50%, 140%);
   z-index: 120;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  max-width: min(560px, calc(100vw - 32px));
+  gap: 6px 12px;
+  width: max-content;
+  max-width: min(560px, calc(100vw - 28px));
   background: var(--navy-800);
   color: #fff;
   border: 1px solid var(--navy-600);
-  border-radius: var(--radius-pill);
-  padding: 13px 22px;
+  border-radius: var(--radius);
+  padding: 13px 18px;
   box-shadow: var(--shadow-lg);
-  font-size: .92rem;
+  font-size: .9rem;
+  line-height: 1.45;
   transition: transform .28s ease, opacity .28s ease;
   opacity: 0;
 }
 .toast.is-visible { transform: translate(-50%, 0); opacity: 1; }
-.toast .toast-icon { color: var(--gold-400); font-weight: 700; }
-.toast a { color: var(--gold-400); font-weight: 600; }
+.toast .toast-icon { color: var(--gold-400); font-weight: 700; flex: none; }
+.toast .toast-text { flex: 1 1 190px; min-width: 0; }
+.toast a { color: var(--gold-400); font-weight: 600; flex: none; }
 
 /* ---------- Utility bar (mobile sticky cart) ---------- */
 .mobile-cart-bar {
@@ -1149,8 +1163,9 @@ table.data .cell-sim { color: var(--gold-600); font-weight: 600; }
   align-items: center;
   justify-content: space-between;
 }
-.mobile-cart-bar .mcb-text { font-size: .88rem; color: var(--ink-soft); }
-.mobile-cart-bar .mcb-text strong { display: block; font-family: var(--font-display); color: var(--navy-800); }
+.mobile-cart-bar .mcb-text { font-size: .8rem; line-height: 1.35; color: var(--ink-soft); min-width: 0; }
+.mobile-cart-bar .mcb-text strong { display: block; font-family: var(--font-display); font-size: .9rem; color: var(--navy-800); }
+.mobile-cart-bar .btn { flex: none; width: auto; }
 
 /* ---------- Reveal on scroll ---------- */
 [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
@@ -1196,6 +1211,24 @@ table.data .cell-sim { color: var(--gold-600); font-weight: 600; }
 
 @media (max-width: 700px) {
   body { font-size: 16px; }
+
+  /* the three class cards read as one labelled group on phones */
+  .grid.grid-3.stacked {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .grid.grid-3.stacked .card {
+    border: 0;
+    border-bottom: 1px solid var(--line-soft);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .grid.grid-3.stacked .card:last-child { border-bottom: 0; }
   .demo-ribbon { font-size: .68rem; letter-spacing: .07em; padding: 8px 12px; }
   .grid-2, .grid-3 { grid-template-columns: minmax(0, 1fr); }
   .book-grid { grid-template-columns: minmax(0, 1fr); }
@@ -1206,6 +1239,9 @@ table.data .cell-sim { color: var(--gold-600); font-weight: 600; }
   .cart-row .row-thumb { width: 56px; }
   .cart-row .row-total-cell { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 10px; border-top: 1px solid var(--line-soft); }
   .cart-row .row-line-total { text-align: left; }
+
+  .checkout-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .checkout-list .co-amount { grid-column: 1; grid-row: auto; order: -1; }
 
   .book-media img { width: 124px; }
   .facts li { flex-direction: column; gap: 2px; }

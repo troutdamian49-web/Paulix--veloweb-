@@ -221,6 +221,7 @@
     icon.setAttribute("aria-hidden", "true");
     icon.textContent = "✓";
     var text = document.createElement("span");
+    text.className = "toast-text";
     text.textContent = message;
     toastEl.appendChild(icon);
     toastEl.appendChild(text);

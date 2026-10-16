@@ -49,12 +49,14 @@
         list.innerHTML = lines.map(function (l) {
           return '' +
             '<li>' +
-              '<span class="co-title">' + l.book.title + '</span>' +
+              '<div class="co-main">' +
+                '<span class="co-title">' + l.book.title + '</span>' +
+                '<span class="co-meta">' + l.book.series + ' series · Subject: ' + l.book.subject +
+                  ' · ' + l.qty + (l.qty === 1 ? ' copy' : ' copies') + ' · demo placeholder rate ' +
+                  catalog.demoUnitRateLabel + '</span>' +
+                '<span class="co-meta pending">Amount payable: ' + catalog.unconfirmed + '</span>' +
+              '</div>' +
               '<span class="co-amount">' + cart.naira(l.demoLineTotal) + '</span>' +
-              '<span class="co-meta">' + l.book.series + ' series · Subject: ' + l.book.subject +
-                ' · ' + l.qty + (l.qty === 1 ? ' copy' : ' copies') + ' · demo placeholder rate ' +
-                catalog.demoUnitRateLabel + '</span>' +
-              '<span class="co-meta" style="text-align:right">Amount payable: ' + catalog.unconfirmed + '</span>' +
             '</li>';
         }).join("");
       }
@@ -144,11 +146,13 @@
         listOut.innerHTML = (order.items || []).map(function (item) {
           return '' +
             '<li>' +
-              '<span class="co-title">' + item.title + '</span>' +
+              '<div class="co-main">' +
+                '<span class="co-title">' + item.title + '</span>' +
+                '<span class="co-meta">' + item.series + ' series · Subject: ' + item.subject +
+                  ' · ' + item.qty + (item.qty === 1 ? ' copy' : ' copies') + '</span>' +
+                '<span class="co-meta pending">Amount payable: ' + catalog.unconfirmed + '</span>' +
+              '</div>' +
               '<span class="co-amount">' + cart.naira(item.demoLineTotal) + '</span>' +
-              '<span class="co-meta">' + item.series + ' series · Subject: ' + item.subject +
-                ' · ' + item.qty + (item.qty === 1 ? ' copy' : ' copies') + '</span>' +
-              '<span class="co-meta" style="text-align:right">Amount payable: ' + catalog.unconfirmed + '</span>' +
             '</li>';
         }).join("");
       }
