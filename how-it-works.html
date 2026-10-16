@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How the demo works — Justice International School (Demo Prototype)</title>
+<meta name="description" content="A step-by-step walkthrough of the Justice International School online textbook ordering prototype, showing exactly which parts are interactive and which are simulated." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0a1e3c" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="demo-ribbon" role="note">
+  <strong>DEMO PROTOTYPE</strong> <span>—</span> NOT AN OFFICIAL SCHOOL SERVICE. Simulated data only.
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Justice International School online textbook ordering — home">
+      <span class="brand-mark" aria-hidden="true">JIS</span>
+      <span class="brand-text">
+        <strong>Justice International School</strong>
+        <small>Online Textbook Ordering</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="class-lists.html">Class lists</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ &amp; safety</a>
+      <a class="nav-cart" href="cart.html">Demo cart <span class="cart-count" data-cart-count hidden>0</span></a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section section-tight section-alt section-line">
+    <div class="wrap">
+      <p class="eyebrow">Walkthrough</p>
+      <h1>How the demonstration works</h1>
+      <p class="muted" style="max-width:72ch">
+        Four steps, from browsing a title to seeing a sample confirmation screen. Two steps are genuinely
+        interactive; two are simulated so you can review the experience without a real order or payment.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <h3>Browse the seven titles</h3>
+          <p>The catalogue lists only the titles confirmed for this review, with search plus subject and series filters.</p>
+          <span class="tag tag-ok">Interactive</span>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <h3>Build a demo cart</h3>
+          <p>Add titles, change quantities or remove items. The header count and demo totals update immediately.</p>
+          <span class="tag tag-ok">Interactive</span>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <h3>Review and confirm</h3>
+          <p>The demo checkout shows the basket, states clearly that payment is not connected, and asks you to acknowledge that before continuing.</p>
+          <span class="tag tag-sim">Simulated</span>
+        </li>
+        <li class="step">
+          <span class="step-num">04</span>
+          <h3>Sample confirmation</h3>
+          <p>A fictional reference such as <strong>DEMO-JIS-XXXXXX</strong> is generated in your browser so the confirmation screen can be reviewed.</p>
+          <span class="tag tag-sim">Simulated</span>
+        </li>
+      </ol>
+
+      <div class="btn-row" style="margin-top:28px">
+        <a class="btn btn-primary" href="books.html">Start at step 1</a>
+        <a class="btn btn-ghost" href="cart.html">Go to the demo cart</a>
+        <a class="btn btn-ghost" href="checkout.html">See the demo checkout</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt section-line">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Being precise</p>
+        <h2>What is real, what is simulated, what is missing</h2>
+        <p class="section-copy muted">
+          Reviewers should be able to tell instantly which parts of this prototype are working software and
+          which parts are placeholders awaiting school decisions.
+        </p>
+      </header>
+
+      <div class="table-wrap">
+        <table class="data">
+          <caption class="sr-only">Status of each part of the prototype</caption>
+          <thead>
+            <tr>
+              <th scope="col">Part of the prototype</th>
+              <th scope="col">Status</th>
+              <th scope="col">Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Catalogue of seven titles</strong></td>
+              <td class="cell-sim">Confirmed for this review</td>
+              <td>These are the titles supplied for the prototype. No additional titles were invented.</td>
+            </tr>
+            <tr>
+              <td><strong>Search and filters</strong></td>
+              <td class="cell-sim">Interactive</td>
+              <td>Filters by subject and series only. A class filter is intentionally absent.</td>
+            </tr>
+            <tr>
+              <td><strong>Demo cart</strong></td>
+              <td class="cell-sim">Interactive</td>
+              <td>Add, remove and change quantities. Stored in your browser only.</td>
+            </tr>
+            <tr>
+              <td><strong>Demo totals</strong></td>
+              <td class="cell-sim">Simulated</td>
+              <td>₦1,000 per copy placeholder rate used purely to demonstrate added totals.</td>
+            </tr>
+            <tr>
+              <td><strong>Real prices</strong></td>
+              <td class="cell-pending">To be confirmed by the school.</td>
+              <td>No price is quoted, calculated or implied anywhere in the prototype.</td>
+            </tr>
+            <tr>
+              <td><strong>Class lists (SS1, SS2, SS3)</strong></td>
+              <td class="cell-pending">To be confirmed by the school.</td>
+              <td>No title is assigned to any class until the school confirms the lists.</td>
+            </tr>
+            <tr>
+              <td><strong>Demo checkout</strong></td>
+              <td class="cell-sim">Simulated</td>
+              <td>Asks for no personal or payment information at all.</td>
+            </tr>
+            <tr>
+              <td><strong>Payment processing</strong></td>
+              <td class="cell-pending">Not connected</td>
+              <td>No gateway, no reference, no receipt. Nothing can be paid on this site.</td>
+            </tr>
+            <tr>
+              <td><strong>Order references</strong></td>
+              <td class="cell-sim">Simulated</td>
+              <td>Fictional samples generated in the browser, prefixed DEMO-JIS-. They are not recognised by the school.</td>
+            </tr>
+            <tr>
+              <td><strong>Stock and availability</strong></td>
+              <td class="cell-pending">To be confirmed by the school.</td>
+              <td>No stock quantities are shown or implied.</td>
+            </tr>
+            <tr>
+              <td><strong>Alerts to the school</strong></td>
+              <td class="cell-pending">Not built</td>
+              <td>There is no server, no email and no dashboard — orders never leave your browser.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Before any real deployment</p>
+        <h2>What would replace the placeholders</h2>
+      </header>
+
+      <div class="grid grid-2">
+        <div class="callout callout-info">
+          <span class="callout-icon" aria-hidden="true">i</span>
+          <div>
+            <h4>From the school</h4>
+            <ul class="tick-list" style="margin-top:10px">
+              <li>Confirmation that the seven titles are named correctly</li>
+              <li>The correct SS1, SS2 and SS3 book lists</li>
+              <li>Real prices and who collects payment</li>
+              <li>A collection or delivery plan for the books</li>
+              <li>Written approval to use the school&rsquo;s name and branding</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon" aria-hidden="true">!</span>
+          <div>
+            <h4>Then, if approved</h4>
+            <ul class="not-list" style="margin-top:10px">
+              <li>A real payment route arranged by the school — never a page asking for card PINs or OTPs</li>
+              <li>A secure server so orders actually reach the school</li>
+              <li>A clear data-handling and privacy policy before any family details are collected</li>
+              <li>A stated process for refunds, corrections and missing books</li>
+            </ul>
+            <p>Until then, this prototype stays a demonstration: <strong>not an official school service</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Try it</p>
+        <h2>Run the four steps now</h2>
+      </header>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="books.html">1. Browse the titles</a>
+        <a class="btn btn-ghost btn-lg" href="cart.html">2. Demo cart</a>
+        <a class="btn btn-ghost btn-lg" href="checkout.html">3. Demo checkout</a>
+        <a class="btn btn-ghost btn-lg" href="order.html">4. Simulated confirmation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">JIS</span>
+        <div>
+          <strong>Justice International School — Online Textbook Ordering</strong>
+          <p>
+            DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE. Every title label, reference and payment
+            status shown in this prototype is sample content created for review.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Prototype pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Book catalogue</a></li>
+          <li><a href="class-lists.html">Class lists</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="faq.html">FAQ &amp; safety</a></li>
+          <li><a href="cart.html">Demo cart</a></li>
+          <li><a href="checkout.html">Demo checkout</a></li>
+          <li><a href="order.html">Simulated order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Please note</h4>
+        <ul>
+          <li>No real payments are processed or verified.</li>
+          <li>No bank, card, PIN or OTP details are ever requested.</li>
+          <li>No parent or pupil information is collected.</li>
+          <li>No title is assigned to SS1, SS2 or SS3 yet.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-legal">
+      <span>&copy; <span id="year">2026</span> Justice International School — Online Textbook Ordering (demo prototype).</span>
+      <span>Prepared for school review only. Not an official school service.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/catalogue.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

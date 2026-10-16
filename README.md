@@ -1,110 +1,147 @@
-# Paulix × VeloWeb — Studio Website
+# Justice International School — Online Textbook Ordering
 
-Marketing site for **Paulix × VeloWeb**, a two-craft studio in Abuja, Nigeria:
-**Paulix** (brand identity, logos, print & social design) and **VeloWeb** (websites,
-e-commerce, SEO & growth).
+**DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE.**
 
-Static site — no build step, no dependencies, no framework. Just open `index.html`.
+A static, dependency-free prototype of an online textbook ordering service, built so
+**Justice International School** can review the idea before any official approval or real
+deployment. Navy-blue and gold, mobile-first, no build step: just open `index.html`.
 
-**Live site:** https://troutdamian49-web.github.io/Paulix--veloweb-/
+> ⚠️ **Nothing here is real.** No payment is processed, no price is quoted, no class list is
+> assigned and no order reaches the school. See [Demo boundaries](#demo-boundaries) below.
 
 ---
 
-## What's inside
+## What the prototype does
 
-| Section | Purpose |
+| Page | Purpose |
 | --- | --- |
-| Hero | Headline, positioning copy, dual WhatsApp calls-to-action, rating proof, "120+ projects" card |
-| Marquee | Scrolling service keywords (Web Design, Brand Identity, E-Commerce, …) |
-| Two crafts | VeloWeb (development) and Paulix (design) split cards with contact numbers |
-| Services | Six service cards, tagged by which side of the studio delivers them |
-| Process | Four steps: Discover → Design → Develop → Deploy & Grow |
-| Stats | Animated counters (projects, clients, years, satisfaction) |
-| Work | Three portfolio showcases |
-| Testimonials | Four client quotes |
-| Contact | WhatsApp CTAs, phone numbers, studio location |
-| Footer + floating button | Navigation and a persistent WhatsApp shortcut |
+| `index.html` | Landing page: what the demo does and does not do, the seven titles, class-list status, the demo notice, reviewer checklist |
+| `books.html` | Catalogue of the seven confirmed titles with live search, subject and series filters, and "add to demo cart" |
+| `cart.html` | Interactive demo cart: change quantities, remove items, clear the cart, live count and demo totals |
+| `checkout.html` | Simulated checkout: acknowledges the demo, collects **nothing**, then creates a fictional order reference |
+| `order.html` | Simulated order confirmation with a `DEMO-JIS-XXXXXX` reference, printable, clearly marked as simulated |
+| `class-lists.html` | Class-list status: SS1, SS2 and SS3 are all "To be confirmed by the school." — no titles assigned |
+| `how-it-works.html` | Step-by-step walkthrough plus a table of what is interactive, simulated or not built |
+| `faq.html` | FAQ, safeguards, what the demo never asks for, and how to clear demo data |
+| `404.html` | Branded not-found page |
+| `studio/` | Archive of the original Paulix × VeloWeb studio site (kept, untouched, not part of the prototype) |
+
+### The seven confirmed titles
+
+1. New Concept English 1
+2. New Concept English 2
+3. TONAD Essential Chemistry
+4. TONAD Essential Physics
+5. New Concept Mathematics 1 (Volume 1)
+6. New Concept Mathematics 2 (Volume 2)
+7. TONAD Essential Marketing
+
+Nothing else is listed. No authors, editions, ISBNs, stock figures, class allocations or real
+prices have been invented: wherever a detail is outstanding the page reads
+**"To be confirmed by the school."**
+
+## Demo boundaries
+
+| Item | Status |
+| --- | --- |
+| Catalogue titles | Seven titles only, as supplied for this review |
+| Real prices | **To be confirmed by the school.** No amount is ever payable |
+| Class lists (SS1 / SS2 / SS3) | **To be confirmed by the school.** No title is assigned to any class |
+| Authors, editions, stock | **To be confirmed by the school.** |
+| Cart maths | Uses a **₦1,000 per copy placeholder rate** so totals can be demonstrated — not a price |
+| Payments | **Not connected.** No gateway, no receipt, nothing can be paid |
+| Order references | **Simulated** in the browser (`DEMO-JIS-XXXXXX`); fictional, not recognised by the school |
+| Personal data | **None collected.** No name, contact, bank, card, PIN or OTP fields anywhere |
+| Storage | Demo cart and simulated order live in this browser only (`localStorage`) — no server, no accounts |
 
 ## Project structure
 
 ```
 .
-├── index.html              # the whole page (semantic, single-page)
-├── 404.html                # branded not-found page for GitHub Pages
+├── index.html                  # prototype home page
+├── books.html                  # catalogue of the seven confirmed titles
+├── cart.html                   # interactive demo cart
+├── checkout.html               # simulated checkout (collects nothing)
+├── order.html                  # simulated order confirmation
+├── class-lists.html            # class-list status (all unconfirmed)
+├── how-it-works.html           # walkthrough + real/simulated/missing table
+├── faq.html                    # FAQ, safeguards, data notes
+├── 404.html                    # branded not-found page
+├── robots.txt                  # keeps the prototype out of search engines
 ├── assets/
-│   ├── css/styles.css      # design system + all layout/responsive rules
-│   ├── js/main.js          # mobile nav, scroll reveals, animated counters
-│   ├── favicon.svg         # "P×V" mark
-│   └── img/
-│       ├── work-ecommerce.jpg   # 1600×1000
-│       ├── work-branding.jpg    # 1600×1000
-│       ├── work-fintech.jpg     # 1600×1000
-│       └── og.jpg               # 1200×630 social share image
-├── robots.txt
-├── sitemap.xml
-└── .nojekyll               # tells GitHub Pages to serve files as-is
+│   ├── css/styles.css          # navy + gold design system, mobile-first
+│   ├── js/
+│   │   ├── catalogue.js        # the seven titles (single source of truth)
+│   │   ├── cart.js             # demo cart engine, localStorage, toasts
+│   │   ├── cart-page.js        # cart page rendering and interactions
+│   │   ├── books.js            # catalogue filters and cart indicators
+│   │   ├── checkout.js         # demo checkout + simulated order page
+│   │   └── site.js             # mobile nav, reveals, footer year, current page
+│   ├── favicon.svg
+│   └── img/books/*.svg         # seven placeholder cover illustrations (not real covers)
+└── studio/                     # archived original studio site (unchanged)
 ```
 
 ## Preview locally
 
-Any static server works. For example:
+Any static server works — no build step, no dependencies:
 
 ```bash
 python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-Or simply double-click `index.html` — everything runs from the file system.
+Opening `index.html` directly from the file system also works, except that the demo cart
+needs `localStorage` and therefore a real origin (`http://…`).
 
-## Editing the content
+## Where to change things
 
-* **Text, services, testimonials, links** — all in `index.html`, clearly commented by section.
-* **Phone numbers / WhatsApp** — search for `wa.me` in `index.html`. Links use the
-  international format without a leading `+` (e.g. `wa.me/2348061401149`) and include a
-  pre-filled message via `?text=`.
-* **Colors and typography** — the `:root` block at the top of `assets/css/styles.css`
-  holds every color, radius, shadow and font choice.
-* **Stats numbers** — each counter has `data-count` and `data-suffix` attributes in
-  `index.html`; the animation lives in `assets/js/main.js`.
+* **The seven titles, subjects and the placeholder rate** — `assets/js/catalogue.js`. It is the
+  single source of truth: the catalogue page, cart, checkout and confirmation all read from it.
+* **Cover illustrations** — swap the SVGs in `assets/img/books/` (keep the filenames).
+* **Colours, spacing and typography** — the `:root` token block at the top of
+  `assets/css/styles.css` (navy `--navy-800`, gold `--gold-500`).
+* **Wording of any warning or notice** — search for `DEMO PROTOTYPE` or
+  `To be confirmed by the school.` in the HTML pages.
+* **What gets shown for an unconfirmed field** — `window.JIS_CATALOGUE.unconfirmed` in
+  `assets/js/catalogue.js`, plus the literal text in the HTML pages.
 
-## Swapping in your real project photos
+### When the school confirms real information
 
-Replace the three files in `assets/img/` (keep the same filenames) with your own
-screenshots or mockups. Recommended: **1600×1000** (16:10), under ~300 KB each, JPEG.
-The cards crop automatically, so any similar aspect ratio works.
+1. Replace the placeholder rate in `assets/js/catalogue.js` with the confirmed prices (and
+   remove the "placeholder rate" wording from `books.html`, `cart.html`, `checkout.html`,
+   `order.html`).
+2. Fill in the confirmed SS1 / SS2 / SS3 lists in `class-lists.html` and
+   `window.JIS_CATALOGUE.classLists`.
+3. Only then connect a real payment route arranged by the school — never a form that asks
+   families for card PINs, bank codes or OTPs.
+4. Remove the demo ribbon and notices **only** when the school has approved an official service.
+
+## Accessibility & performance
+
+* Semantic landmarks, skip link, visible gold focus rings, `aria-pressed` filter chips,
+  `aria-live` toasts, labelled quantity controls.
+* Everything works with the keyboard, including the mobile menu (closes on `Esc`) and the
+  catalogue filters.
+* `prefers-reduced-motion` disables reveals and transitions; a `<noscript>` fallback keeps
+  revealed content visible.
+* No JavaScript libraries, no render-blocking CSS beyond Google Fonts, SVG covers, and
+  system-font fallbacks — the prototype stays fast on slow mobile networks.
+* Print stylesheet: the simulated confirmation prints cleanly with its demo warnings.
 
 ## Deploying
 
-The site is plain HTML/CSS/JS, so **either** GitHub Pages publishing option works — pick
-whichever you find first:
+The site is plain HTML/CSS/JS. Both GitHub Pages publishing options work:
 
-**Option A — Deploy from a branch (simplest)**
+* **Deploy from a branch** — Settings → Pages → Source: *Deploy from a branch*,
+  branch `main`, folder `/ (root)`.
+* **GitHub Actions** — Source: *GitHub Actions*; `.github/workflows/deploy-pages.yml`
+  publishes on every push to `main`, and steps aside quietly if Pages is set to publish
+  from the branch instead.
 
-1. Repo → **Settings** tab (next to Insights; on a narrow window it hides under the **⋯** menu)
-2. Left sidebar → **Pages** (under *Code, planning, and automation*)
-3. Under **Build and deployment → Source**, choose **Deploy from a branch**
-4. Branch: **main**, Folder: **/ (root)** → **Save**
+## The archived studio site
 
-**Option B — GitHub Actions**
-
-Same Pages screen, but choose **GitHub Actions** as the Source. The workflow in
-`.github/workflows/deploy-pages.yml` then publishes the site on every push to `main`.
-
-The workflow detects which option you picked and does the right thing: it deploys when
-Pages is set to GitHub Actions, and steps aside quietly when Pages publishes from the
-branch. It never fails the build because of a Pages setting.
-
-Direct link to the setting: https://github.com/troutdamian49-web/Paulix--veloweb-/settings/pages
-
-The site is served at https://troutdamian49-web.github.io/Paulix--veloweb-/
-
-To point a custom domain here later: add the domain in **Settings → Pages → Custom domain**
-and create a `CNAME` file containing just the domain name.
-
-## Accessibility & performance notes
-
-* Semantic landmarks (`header`, `main`, `nav`, `footer`), skip link, and visible focus rings.
-* All interactive controls are reachable by keyboard; the mobile menu closes on `Esc`.
-* `prefers-reduced-motion` disables reveals, counters and marquee scrolling.
-* No JavaScript libraries, no render-blocking CSS, lazy-loaded images, and system-font
-  fallbacks — the page stays fast on slow Nigerian mobile networks.
+`studio/` holds the original Paulix × VeloWeb studio website (its own `index.html` and
+`assets/`), moved there unchanged so it could be preserved while the repository root hosts
+the school prototype. It is a separate, unrelated site: nothing in it relates to Justice
+International School and nothing in the prototype links to it.

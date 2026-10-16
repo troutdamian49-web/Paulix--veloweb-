@@ -1,4 +1,8 @@
+# Justice International School — Online Textbook Ordering
+# DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE.
+#
+# This prototype is published only so the school can review it. It must not be
+# indexed by search engines, and it must not be mistaken for an official school
+# service. Every page also carries a "noindex, nofollow" robots meta tag.
 User-agent: *
-Allow: /
-
-Sitemap: https://troutdamian49-web.github.io/Paulix--veloweb-/sitemap.xml
+Disallow: /

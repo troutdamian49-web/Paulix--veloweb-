@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Confirmed textbook titles — Justice International School (Demo Prototype)</title>
+<meta name="description" content="The seven textbook titles confirmed for this demo prototype of Justice International School online textbook ordering. Prices and class lists are to be confirmed by the school." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0a1e3c" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="demo-ribbon" role="note">
+  <strong>DEMO PROTOTYPE</strong> <span>—</span> NOT AN OFFICIAL SCHOOL SERVICE. Simulated data only.
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Justice International School online textbook ordering — home">
+      <span class="brand-mark" aria-hidden="true">JIS</span>
+      <span class="brand-text">
+        <strong>Justice International School</strong>
+        <small>Online Textbook Ordering</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="class-lists.html">Class lists</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ &amp; safety</a>
+      <a class="nav-cart" href="cart.html">Demo cart <span class="cart-count" data-cart-count hidden>0</span></a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section section-tight section-alt section-line">
+    <div class="wrap">
+      <p class="eyebrow">Catalogue</p>
+      <h1 style="max-width:26ch">The seven confirmed textbook titles</h1>
+      <p class="muted" style="max-width:72ch">
+        This is the complete catalogue for the prototype. Nothing has been added beyond the titles
+        confirmed for this review — no extra textbooks, no authors, no editions, no stock figures and
+        no real prices.
+      </p>
+
+      <div class="grid grid-2" style="margin-top:24px">
+        <div class="callout callout-danger">
+          <span class="callout-icon" aria-hidden="true">!</span>
+          <div>
+            <h4>DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE.</h4>
+            <p>Adding a title to the demo cart does not order anything and does not reserve any book. No order reaches the school.</p>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-icon" aria-hidden="true">i</span>
+          <div>
+            <h4>Prices, classes and stock: To be confirmed by the school.</h4>
+            <p>The cart uses a demo placeholder rate of <strong>₦1,000 per copy</strong> purely so the totals can be demonstrated. It is not a price, not a quotation and not payable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="catalogue">
+    <div class="wrap">
+      <div class="filter-bar">
+        <div class="filter-row">
+          <div class="field field-grow">
+            <label for="bookSearch">Search the confirmed titles</label>
+            <input class="input" id="bookSearch" type="search" placeholder="e.g. English, TONAD, Mathematics" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label id="subjectFilterLabel">Subject</label>
+            <div class="chip-row" role="group" aria-labelledby="subjectFilterLabel">
+              <button type="button" class="chip" data-filter-subject="all" aria-pressed="true">All subjects</button>
+          <button type="button" class="chip" data-filter-subject="English" aria-pressed="false">English</button>
+          <button type="button" class="chip" data-filter-subject="Chemistry" aria-pressed="false">Chemistry</button>
+          <button type="button" class="chip" data-filter-subject="Physics" aria-pressed="false">Physics</button>
+          <button type="button" class="chip" data-filter-subject="Mathematics" aria-pressed="false">Mathematics</button>
+          <button type="button" class="chip" data-filter-subject="Marketing" aria-pressed="false">Marketing</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label id="seriesFilterLabel">Series</label>
+            <div class="chip-row" role="group" aria-labelledby="seriesFilterLabel">
+              <button type="button" class="chip" data-filter-series="all" aria-pressed="true">All series</button>
+          <button type="button" class="chip" data-filter-series="New Concept" aria-pressed="false">New Concept</button>
+          <button type="button" class="chip" data-filter-series="TONAD Essential" aria-pressed="false">TONAD Essential</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-meta">
+          <span data-books-count>Showing 7 of 7 confirmed titles</span>
+          <button type="button" class="btn btn-ghost btn-sm" data-filter-reset>Reset filters</button>
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-bottom:26px">
+        <span class="callout-icon" aria-hidden="true">i</span>
+        <div>
+          <h4>Why there is no class filter</h4>
+          <p>No title may be assigned to SS1, SS2 or SS3 until the school confirms the correct class lists, so a class filter would be misleading. Read the <a href="class-lists.html">class-list status</a>.</p>
+        </div>
+      </div>
+
+      <div class="book-grid" data-book-grid>
+      <!-- New Concept English 1 -->
+      <article class="book-card" id="new-concept-english-1" data-book data-id="new-concept-english-1">
+        <div class="book-media">
+          <img src="assets/img/books/new-concept-english-1.svg" alt="Illustration for New Concept English 1 (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">New Concept series</span></p>
+          <h3 class="book-title">New Concept English 1</h3>
+          <p class="book-summary">Part of the New Concept English series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">New Concept series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">English</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="new-concept-english-1">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- New Concept English 2 -->
+      <article class="book-card" id="new-concept-english-2" data-book data-id="new-concept-english-2">
+        <div class="book-media">
+          <img src="assets/img/books/new-concept-english-2.svg" alt="Illustration for New Concept English 2 (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">New Concept series</span></p>
+          <h3 class="book-title">New Concept English 2</h3>
+          <p class="book-summary">Part of the New Concept English series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">New Concept series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">English</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="new-concept-english-2">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- TONAD Essential Chemistry -->
+      <article class="book-card" id="tonad-essential-chemistry" data-book data-id="tonad-essential-chemistry">
+        <div class="book-media">
+          <img src="assets/img/books/tonad-essential-chemistry.svg" alt="Illustration for TONAD Essential Chemistry (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">TONAD Essential series</span></p>
+          <h3 class="book-title">TONAD Essential Chemistry</h3>
+          <p class="book-summary">Part of the TONAD Essential series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">TONAD Essential series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">Chemistry</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="tonad-essential-chemistry">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- TONAD Essential Physics -->
+      <article class="book-card" id="tonad-essential-physics" data-book data-id="tonad-essential-physics">
+        <div class="book-media">
+          <img src="assets/img/books/tonad-essential-physics.svg" alt="Illustration for TONAD Essential Physics (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">TONAD Essential series</span></p>
+          <h3 class="book-title">TONAD Essential Physics</h3>
+          <p class="book-summary">Part of the TONAD Essential series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">TONAD Essential series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">Physics</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="tonad-essential-physics">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- New Concept Mathematics 1 (Volume 1) -->
+      <article class="book-card" id="new-concept-mathematics-1-volume-1" data-book data-id="new-concept-mathematics-1-volume-1">
+        <div class="book-media">
+          <img src="assets/img/books/new-concept-mathematics-1.svg" alt="Illustration for New Concept Mathematics 1 (Volume 1) (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">New Concept series</span></p>
+          <h3 class="book-title">New Concept Mathematics 1 (Volume 1)</h3>
+          <p class="book-summary">Part of the New Concept Mathematics series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">New Concept series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">Mathematics</span></li>
+          <li><span class="fact-label">Volume</span><span class="fact-value">Volume 1</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="new-concept-mathematics-1-volume-1">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- New Concept Mathematics 2 (Volume 2) -->
+      <article class="book-card" id="new-concept-mathematics-2-volume-2" data-book data-id="new-concept-mathematics-2-volume-2">
+        <div class="book-media">
+          <img src="assets/img/books/new-concept-mathematics-2.svg" alt="Illustration for New Concept Mathematics 2 (Volume 2) (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">New Concept series</span></p>
+          <h3 class="book-title">New Concept Mathematics 2 (Volume 2)</h3>
+          <p class="book-summary">Part of the New Concept Mathematics series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">New Concept series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">Mathematics</span></li>
+          <li><span class="fact-label">Volume</span><span class="fact-value">Volume 2</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="new-concept-mathematics-2-volume-2">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- TONAD Essential Marketing -->
+      <article class="book-card" id="tonad-essential-marketing" data-book data-id="tonad-essential-marketing">
+        <div class="book-media">
+          <img src="assets/img/books/tonad-essential-marketing.svg" alt="Illustration for TONAD Essential Marketing (demo prototype — not the actual book cover)"
+               width="600" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="book-body">
+          <p class="book-series"><span class="tag tag-gold">TONAD Essential series</span></p>
+          <h3 class="book-title">TONAD Essential Marketing</h3>
+          <p class="book-summary">Part of the TONAD Essential series. Author, edition, price, availability and the class that needs this title are all still to be confirmed by the school.</p>
+
+          <ul class="facts">
+          <li><span class="fact-label">Series</span><span class="fact-value">TONAD Essential series</span></li>
+          <li><span class="fact-label">Subject</span><span class="fact-value">Marketing</span></li>
+          <li><span class="fact-label">Class / level</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Author / edition</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Price (real)</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          <li><span class="fact-label">Stock / availability</span><span class="fact-value pending">To be confirmed by the school.</span></li>
+          </ul>
+
+          <div class="book-actions">
+            <p class="in-order" data-in-order hidden>1 copy is in your demo cart</p>
+            <button type="button" class="btn btn-primary" data-add-to-order="tonad-essential-marketing">Add to demo cart</button>
+            <p class="field-note">Illustration only — not the actual book cover. Real price and class level: To be confirmed by the school.</p>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <div class="empty-state" data-books-empty hidden>
+        <span class="empty-icon" aria-hidden="true">0</span>
+        <h3>No confirmed title matches those filters</h3>
+        <p>This prototype lists exactly seven titles. Clear the search box or reset the filters to see them all again.</p>
+        <p style="margin-top:18px"><button type="button" class="btn btn-primary" data-filter-reset>Reset filters</button></p>
+      </div>
+
+      <div class="btn-row" style="margin-top:32px">
+        <a class="btn btn-primary" href="cart.html">Open the demo cart</a>
+        <a class="btn btn-ghost" href="how-it-works.html">How the demo works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark section-tight">
+    <div class="wrap">
+      <h2>What is confirmed, and what is not</h2>
+      <div class="table-wrap" style="margin-top:20px">
+        <table class="data">
+          <caption class="sr-only">Status of information shown in this prototype</caption>
+          <thead>
+            <tr><th scope="col">Information</th><th scope="col">Status in this prototype</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Titles in the catalogue</strong></td><td>Confirmed for this review — seven titles, listed above.</td></tr>
+            <tr><td><strong>Subject of each title</strong></td><td>Confirmed — shown on each card.</td></tr>
+            <tr><td><strong>Real price of each title</strong></td><td class="cell-pending">To be confirmed by the school.</td></tr>
+            <tr><td><strong>Class that needs each title</strong></td><td class="cell-pending">To be confirmed by the school (SS1, SS2 and SS3 lists are all outstanding).</td></tr>
+            <tr><td><strong>Author and edition</strong></td><td class="cell-pending">To be confirmed by the school.</td></tr>
+            <tr><td><strong>Stock and availability</strong></td><td class="cell-pending">To be confirmed by the school.</td></tr>
+            <tr><td><strong>Payment processing</strong></td><td class="cell-pending">Not connected. Nothing can be paid on this prototype.</td></tr>
+            <tr><td><strong>Demo cart totals</strong></td><td class="cell-sim">Simulated using a ₦1,000 placeholder rate — not a price.</td></tr>
+            <tr><td><strong>Order references</strong></td><td class="cell-sim">Simulated in your browser only — no order exists in any school system.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">JIS</span>
+        <div>
+          <strong>Justice International School — Online Textbook Ordering</strong>
+          <p>
+            DEMO PROTOTYPE — NOT AN OFFICIAL SCHOOL SERVICE. Every title label, reference and payment
+            status shown in this prototype is sample content created for review.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Prototype pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Book catalogue</a></li>
+          <li><a href="class-lists.html">Class lists</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="faq.html">FAQ &amp; safety</a></li>
+          <li><a href="cart.html">Demo cart</a></li>
+          <li><a href="checkout.html">Demo checkout</a></li>
+          <li><a href="order.html">Simulated order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Please note</h4>
+        <ul>
+          <li>No real payments are processed or verified.</li>
+          <li>No bank, card, PIN or OTP details are ever requested.</li>
+          <li>No parent or pupil information is collected.</li>
+          <li>No title is assigned to SS1, SS2 or SS3 yet.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-legal">
+      <span>&copy; <span id="year">2026</span> Justice International School — Online Textbook Ordering (demo prototype).</span>
+      <span>Prepared for school review only. Not an official school service.</span>
+    </p>
+  </div>
+</footer>
+
+<div class="mobile-cart-bar" role="region" aria-label="Demo cart summary">
+  <span class="mcb-text"><strong data-cart-count-label>0 copies in demo cart</strong>Simulation only — nothing is ordered.</span>
+  <a class="btn btn-primary btn-sm" href="cart.html">View cart</a>
+</div>
+
+<script src="assets/js/catalogue.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/books.js" defer></script>
+</body>
+</html>
